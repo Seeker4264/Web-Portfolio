@@ -1,29 +1,73 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Badge from '../components/Badge.astro';
+import Social from '../components/Social.astro';
+import Experience from '../components/Experience.astro';
+
+import LinkedIn from '../components/icons/LinkedIn.astro';
+import Github from '../components/icons/Github.astro';
+import Mail from '../components/icons/Mail.astro';
+import Briefcase from '../components/icons/Briefcase.astro';
 ---
 
-<Layout title="Welcome!">
+<Layout
+	title="Sebastian Portfolio - Software Developer"
+	description="Hire Sebastian to develop your next Web Application.">
 	<main>
-		<section id="hero" class="w-full lg:w-[48rem] py-44 mx-auto">
-			<h1 class="flex flex-row gap-x-6 text-5xl font-semibold pb-4">
-				Sebastián Hernández
-				<a class="flex flex-row justify-center items-center"
-					href="https://www.linkedin.com/in/sebasti%C3%A1n-hern%C3%A1ndez-803355296/"
-					target="_blank"
-					rel="noopener">
+
+		<section id="hero" class="w-[80%] lg:w-[48rem] py-8 lg:py-24 mx-auto">
+			<aside class="flex flex-row items-center gap-x-6 mb-5">
+				<img class="rounded-full size-20" src="/profile.jpg" alt="sebastian">
+				<a class="flex flex-row justify-center items-center size-fit duration-150 hover:scale-110"
+				href="https://www.linkedin.com/in/sebasti%C3%A1n-hern%C3%A1ndez-803355296/"
+				target="_blank"
+				rel="noopener">
 					<Badge>
 						Available to work
 					</Badge>
 				</a>
+			</aside>
+			<h1 class="flex flex-wrap flex-row gap-x-4 text-5xl md:text-6xl font-bold pb-4">
+				<span class="bg-gradient-to-r from-[#65c4ff] to-[#43e6db] text-transparent bg-clip-text">Sebastián</span> Hernández
 			</h1>
-			<h2 class="text-2xl font-medium">
-				Software developer | Front-end & Back-end developer
+			<h2 class="text-2xl font-medium pb-2">
+				Software engineer & Frontend & Backend developer
 			</h2>
+			<p class="text-lg font-thin text-[#ffffffcc] pb-1">
+				Venezuelan web programmer with 2 years of experience. Specialized in creating <span class="text-[#befdf5] font-semibold">web applications and websites.</span>
+			</p>
+
+			<nav class="flex flex-wrap flex-row items-center gap-4 py-5">
+
+				<Social title="GitHub" href="https://github.com/Seeker4264/">
+					<Github class="size-4" />
+				</Social>
+				<Social title="LinkedIn" href="https://www.linkedin.com/in/sebasti%C3%A1n-hern%C3%A1ndez-803355296/">
+					<LinkedIn class="size-4" />
+				</Social>
+				<Social title="Contact me" href="mailto:sebashmorales@gmail.com">
+					<Mail class="size-4" />
+				</Social>
+				
+			</nav>
 		</section>
 
-		<section id="experience">
+		<section id="experience" class="relative w-[80%] lg:w-[56rem] py-16 mx-auto">
+			<div class="flex flex-row items-center gap-4 pb-12">
+				<Briefcase class="size-12 sm:size-16" />
+				<h2 class="inline-block text-4xl sm:text-5xl font-bold bg-gradient-to-tr from-[#ffffff] via-[#ffffff] to-[#b897e3] text-transparent bg-clip-text">
+					Experience
+				</h2>
+			</div>
+
+			<div class="absolute rounded-full w-[0.15rem] h-[60%] mt-[12px] ml-[11px] z-[-1] bg-gradient-to-b from-[#86bcd988] via-[#6d5185] to-transparent" />
+
+			<Experience />
+		</section>
+
+		<section id="projects" class="relative w-[80%] lg:w-[56rem] py-16 mx-auto">
 			
 		</section>
+
 	</main>
 </Layout>
