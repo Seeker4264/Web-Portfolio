@@ -47,10 +47,22 @@ const { title, description } = Astro.props;
 		min-height: 100vh;
 	}
 
+	main {
+		animation: entering 1s ease-out;
+	}
+
 	@media (prefers-reduced-motion: reduce) {
 		html {
 			scroll-behavior: auto;
 		}
+	}
+
+	/*  *//*  *//*  *//*  *//*  */
+
+	@property --a {
+		syntax: '<angle>';
+		initial-value: 0deg;
+		inherits: true;
 	}
 
 	.badge::after {
@@ -61,6 +73,57 @@ const { title, description } = Astro.props;
 		height: 115%;
 		border-radius: 9999px;
 		z-index: -1;
-		background-image: conic-gradient(from 45deg, #74f1ed, #9a5bff, #74f1ed);
+		background-image: conic-gradient(from var(--a), #74f1ed, #9a5bff, #74f1ed);
+		animation: border-gradient-anim 3s linear infinite;
+	}
+
+	@keyframes border-gradient-anim {
+		0% {
+			--a: 0deg;
+		}
+		100% {
+			--a: 360deg;
+		}
+	}
+
+	/*  *//*  *//*  *//*  *//*  */
+	
+	@property --b {
+		syntax: '<angle>';
+		initial-value: 0deg;
+		inherits: true;
+	}
+
+	.textGrad {
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: transparent;
+		background-image: conic-gradient(from var(--b), #7ab0f6, #8eefdc, #7ab0f6);
+		animation: text-gradient-anim 3s linear infinite;
+	}
+
+	@keyframes text-gradient-anim {
+		0% {
+			--b: 0deg;
+		}
+		50% {
+			--b: 180deg;
+		}
+		100% {
+			--b: 360deg;
+		}
+	}
+
+	/*  *//*  *//*  *//*  *//*  */
+
+	@keyframes entering {
+		0% {
+			opacity: 0;
+			transform: scale(0.90);
+		}
+		100% {
+			opacity: 1;
+			transform: scale(1);
+		}
 	}
 </style>

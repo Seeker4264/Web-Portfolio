@@ -1,0 +1,105 @@
+---
+import HTML5 from './icons/skill_icons/HTML5.astro';
+import CSS from './icons/skill_icons/CSS.astro';
+import JavaScript from './icons/skill_icons/JavaScript.astro';
+import TypeScript from './icons/skill_icons/TypeScript.astro';
+import NodeJS from './icons/skill_icons/NodeJS.astro';
+import ReactJS from './icons/skill_icons/ReactJS.astro';
+import Tailwind from './icons/skill_icons/Tailwind.astro';
+import NextJS from './icons/skill_icons/NextJS.astro';
+import Postgre from './icons/skill_icons/Postgre.astro';
+
+const TAGS = {
+    HTML5: {
+        name: "HTML5",
+        classColor: "bg-[#B85B4199] text-white",
+        icon: HTML5
+    },
+    CSS: {
+        name: "CSS",
+        classColor: "bg-[#3C96BE99] text-white",
+        icon: CSS
+    },
+    JAVASCRIPT: {
+        name: "JavaScript",
+        classColor: "bg-[#C4B23899] text-black",
+        icon: JavaScript
+    },
+    TYPESCRIPT: {
+        name: "TypeScript",
+        classColor: "bg-[#2C5A8A99] text-white",
+        icon: TypeScript
+    },
+    NODE: {
+        name: "Node.js",
+        classColor: "bg-[#407A2E99] text-white",
+        icon: NodeJS
+    },
+    REACT: {
+        name: "React.js",
+        classColor: "bg-[#388F9F99] text-white",
+        icon: ReactJS
+    },
+    TAILWIND: {
+        name: "Tailwind CSS",
+        classColor: "bg-[#3D858699] text-white",
+        icon: Tailwind
+    },
+    NEXT: {
+        name: "Next.js",
+        classColor: "bg-[#11111199] text-white",
+        icon: NextJS
+    },
+    POSTGRE: {
+        name: "PostgreSQL",
+        classColor: "bg-[#3D5B7499] text-white",
+        icon: Postgre
+    },
+};
+
+const PROJECTS = [
+    {
+        title: "Strapi Shopping App",
+        description: "A small e-commerce website to showcase as a demostration.",
+        image: "/project1.jpg",
+        imgalt: "project one",
+        link: "https://seeker-shopping-app.vercel.app/",
+        tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.NODE]
+    },
+    {
+        title: "Landing Page",
+        description: "A nice looking landing page with responsive design and sleek animations.",
+        image: "/project2.jpg",
+        imgalt: "project two",
+        link: "#",
+        tags: [TAGS.REACT, TAGS.TYPESCRIPT, TAGS.CSS, TAGS.HTML5]
+    }
+];
+---
+{
+    PROJECTS.map((pr) => {return (
+        <article class="flex flex-col md:grid md:grid-cols-[60%_40%] gap-10 pt-2 pb-16">
+            <img class="object-cover rounded-md border border-[#303939] w-[32rem] max-sm:h-[10rem] h-[12rem] lg:h-[16rem] duration-150 hover:scale-[1.01] hover:-translate-y-[2px]" src={pr.image} alt={pr.imgalt}>
+            <aside>
+                <h3 class="text-3xl font-semibold mb-3">{pr.title}</h3>
+                <ul class="flex flex-row flex-wrap gap-x-1 gap-y-2 mb-3">
+                    {
+                        pr.tags.map((tag) => (
+                            <li class={`flex justify-center items-center gap-2 rounded-full text-xs font-medium text-nowrap px-2 py-1 w-fit cursor-default duration-100 hover:scale-[1.05] ${tag.classColor}`}>
+                                <tag.icon class="size-4" />
+                                {tag.name}
+                            </li>
+                        ))
+                    }
+                </ul>
+                <p class="text-lg font-medium text-pretty mb-5">{pr.description}</p>
+                {
+                    pr.link !== "#" &&
+                    <a class="rounded-xl border border-[#485263] px-4 py-2 ml-4 text-xl font-bold text-white bg-[#353d4a] duration-100 hover:bg-[#3d5170]" href={pr.link}>
+                        Live demo
+                    </a>
+                }
+            </aside>
+        </article>
+    )})
+}

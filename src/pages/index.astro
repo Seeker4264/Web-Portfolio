@@ -3,11 +3,13 @@ import Layout from '../layouts/Layout.astro';
 import Badge from '../components/Badge.astro';
 import Social from '../components/Social.astro';
 import Experience from '../components/Experience.astro';
+import Projects from '../components/Projects.astro';
 
 import LinkedIn from '../components/icons/LinkedIn.astro';
 import Github from '../components/icons/Github.astro';
 import Mail from '../components/icons/Mail.astro';
 import Briefcase from '../components/icons/Briefcase.astro';
+import Code from '../components/icons/Code.astro';
 ---
 
 <Layout
@@ -28,7 +30,10 @@ import Briefcase from '../components/icons/Briefcase.astro';
 				</a>
 			</aside>
 			<h1 class="flex flex-wrap flex-row gap-x-4 text-5xl md:text-6xl font-bold pb-4">
-				<span class="bg-gradient-to-r from-[#65c4ff] to-[#43e6db] text-transparent bg-clip-text">Sebastián</span> Hernández
+				<span class="textGrad">
+					Sebastián
+				</span>
+				Hernández
 			</h1>
 			<h2 class="text-2xl font-medium pb-2">
 				Software engineer & Frontend & Backend developer
@@ -60,13 +65,20 @@ import Briefcase from '../components/icons/Briefcase.astro';
 				</h2>
 			</div>
 
-			<div class="absolute rounded-full w-[0.15rem] h-[60%] mt-[12px] ml-[11px] z-[-1] bg-gradient-to-b from-[#86bcd988] via-[#6d5185] to-transparent" />
+			<div class="absolute rounded-full w-[0.15rem] h-[60%] mt-[12px] ml-[11px] z-[-1] bg-gradient-to-b from-[#739fb7] via-[#6d5185] to-transparent" />
 
 			<Experience />
 		</section>
 
 		<section id="projects" class="relative w-[80%] lg:w-[56rem] py-16 mx-auto">
-			
+			<div class="flex flex-row items-center gap-4 pb-12">
+				<Code class="size-12 sm:size-16" />
+				<h2 class="inline-block text-4xl sm:text-5xl font-bold bg-gradient-to-t from-[#ffffff] via-[#ffffff] to-[#b897e3] text-transparent bg-clip-text">
+					Projects
+				</h2>
+			</div>
+
+			<Projects />
 		</section>
 
 	</main>
