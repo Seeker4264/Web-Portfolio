@@ -20,8 +20,8 @@ const { title, description } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="">
-		<div class="absolute inset-0 -z-10 h-full w-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:18px_24px]"></div>
+	<body>
+		<div class="absolute inset-0 -z-10 h-full w-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:18px_24px]" />
 		<Header />
 		<slot />
 		<Footer />
@@ -33,9 +33,7 @@ const { title, description } = Astro.props;
 	}
 
 	html {
-		background: radial-gradient(at right top, #2a3334 33%, #1c1f20 50%, #0a0a0a 100%);
-		background-repeat: no-repeat;
-		background-attachment: fixed;
+		background: #1c1f20 ;
 		font-family: 'Noto Sans Variable', sans-serif;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
