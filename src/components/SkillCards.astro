@@ -73,10 +73,10 @@ const TAGS = [
     },
 ];
 ---
-<ul class="grid grid-cols-5 gap-5">
+<ul class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 place-items-center gap-5">
     {
         TAGS.map((tag) => {return (
-            <li class="group flex flex-col justify-center items-center rounded-lg border border-[#555] gap-5 p-6 shadow-[0px_10px_30px_-5px_black] bg-[#111] duration-200 hover:scale-105 hover:bg-[#222]">
+            <li class="group flex flex-col justify-center items-center rounded-lg border border-[#555] gap-5 w-[10rem] p-6 shadow-[0px_10px_30px_-5px_black] bg-[#111] duration-200 hover:scale-105 hover:bg-[#222]">
                 <tag.icon class="size-16 filter grayscale duration-200 group-hover:grayscale-0" />
                 <h4 class="text-xl font-bold">{tag.name}</h4>
             </li>
