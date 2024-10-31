@@ -4,12 +4,15 @@ import Badge from '../components/Badge.astro';
 import Social from '../components/Social.astro';
 import Experience from '../components/Experience.astro';
 import Projects from '../components/Projects.astro';
+import SkillCards from '../components/SkillCards.astro';
 
 import LinkedIn from '../components/icons/LinkedIn.astro';
 import Github from '../components/icons/Github.astro';
 import Mail from '../components/icons/Mail.astro';
 import Briefcase from '../components/icons/Briefcase.astro';
 import Code from '../components/icons/Code.astro';
+import Info from '../components/icons/Info.astro';
+import Tool from '../components/icons/Tool.astro';
 ---
 
 <Layout
@@ -79,6 +82,27 @@ import Code from '../components/icons/Code.astro';
 			</div>
 
 			<Projects />
+		</section>
+
+		<section id="skills" class="relative w-[80%] lg:w-[56rem] py-16 mx-auto">
+			<div class="flex flex-row items-center gap-4 pb-12">
+				<Tool class="size-12 sm:size-16" />
+				<h2 class="inline-block text-4xl sm:text-5xl font-bold bg-gradient-to-br from-[#ffffff] via-[#ffffff] to-[#b897e3] text-transparent bg-clip-text">
+					Skills
+				</h2>
+			</div>
+
+			<SkillCards />
+		</section>
+
+		<section id="about" class="relative w-[80%] lg:w-[56rem] py-16 mx-auto">
+			<div class="flex flex-row items-center gap-4 pb-12">
+				<Info class="size-12 sm:size-16" />
+				<h2 class="inline-block text-4xl sm:text-5xl font-bold bg-gradient-to-b from-[#ffffff] via-[#ffffff] to-[#b897e3] text-transparent bg-clip-text">
+					About me
+				</h2>
+			</div>
+
 		</section>
 
 	</main>
