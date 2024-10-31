@@ -101,7 +101,7 @@ const PROJECTS = [
         description: "A nice looking landing page with responsive design and sleek animations.",
         image: "/project2.jpg",
         imgalt: "project two",
-        link: "#",
+        link: "https://sh-company-finance.vercel.app",
         tags: [TAGS.REACT, TAGS.TYPESCRIPT, TAGS.CSS, TAGS.HTML5]
     }
 ];
@@ -115,7 +115,7 @@ const PROJECTS = [
                 <ul class="flex flex-row flex-wrap gap-x-1 gap-y-2 mb-3">
                     {
                         pr.tags.map((tag) => (
-                            <li class={`flex justify-center items-center gap-2 rounded-full text-xs font-medium text-nowrap px-2 py-1 w-fit cursor-default duration-100 hover:scale-[1.05] ${tag.classColor}`}>
+                            <li class={`flex justify-center items-center gap-2 rounded-full text-xs font-medium text-nowrap px-2 py-1 w-fit cursor-default select-none duration-100 hover:scale-[1.05] ${tag.classColor}`}>
                                 <tag.icon class="size-4" />
                                 {tag.name}
                             </li>
