@@ -10,7 +10,79 @@ body {
   min-height: 100vh;
   grid-template-rows: auto 1fr auto;
   background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+  color: #ffffff;
+  font-family: 'Noto Sans Variable', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+/*              */
+/*  Name style  */
+/*              */
+
+@property --b {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: true;
+}
+
+.textGrad {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: conic-gradient(from var(--b), #7ab0f6, #8eefdc, #7ab0f6);
+  animation: text-gradient-anim 3s linear infinite;
+}
+
+@keyframes text-gradient-anim {
+  0% {
+    --b: 0deg;
+  }
+
+  50% {
+    --b: 180deg;
+  }
+
+  100% {
+    --b: 360deg;
+  }
+}
+
+/*               */
+/*  Badge style  */
+/*               */
+
+@property --a {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: true;
+}
+
+.badge::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 103%;
+  height: 115%;
+  border-radius: 9999px;
+  z-index: -1;
+  background-image: conic-gradient(from var(--a), #74f1ed, #9a5bff, #74f1ed);
+  animation: border-gradient-anim 3s linear infinite;
+}
+
+@keyframes border-gradient-anim {
+  0% {
+    --a: 0deg;
+  }
+
+  100% {
+    --a: 360deg;
+  }
+}
+
+/*                          */
+/*  Stars background style  */
+/*                          */
 
 @function random_range($min, $max) {
   $rand: math.random();
@@ -126,4 +198,25 @@ body {
   50% {
     opacity: 0.6;
   }
+}
+
+/*                       */
+/*  Animation on scroll  */
+/*                       */
+
+.hidden-element {
+  opacity: 0;
+  transition: all 1s;
+  transform: translateY(100px) scale(0.9);
+}
+
+@media(prefers-reduced-motion) {
+  .hidden-element {
+    transition: none;
+  }
+}
+
+.show-element {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }

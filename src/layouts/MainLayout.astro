@@ -27,4 +27,16 @@ const { title, description } = Astro.props;
     <slot />
     <Footer />
   </body>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show-element");
+        }
+      });
+    });
+
+    const hiddenElements = document.querySelectorAll(".hidden-element");
+    hiddenElements.forEach((el) => observer.observe(el));
+  </script>
 </html>
