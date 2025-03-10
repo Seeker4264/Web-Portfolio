@@ -1,24 +1,30 @@
+---
+const { locale, headers } = Astro.props;
+---
+
 <header
   class="sticky top-0 flex justify-center items-center gap-x-5 sm:gap-x-10 py-6 [&>a]:text-[1.05rem] sm:[&>a]:text-[0.95rem] [&>a]:font-semibold text-[#ecfcff]"
 >
   <a
     class="duration-150 hover:scale-[1.15] hover:translate-y-[-2px] hover:text-[#6aa8f9]"
-    href="/">Home</a
+    href={`/${locale}`}>{headers.header.home}</a
   >
   <a
     class="duration-150 hover:scale-[1.15] hover:translate-y-[-2px] hover:text-[#6aa8f9]"
-    href="/experience">Experience</a
+    href={`/${locale}/experience`}>{headers.header.experience}</a
   >
   <a
     class="duration-150 hover:scale-[1.15] hover:translate-y-[-2px] hover:text-[#6aa8f9]"
-    href="/projects">Projects</a
+    href={`/${locale}/projects`}>{headers.header.projects}</a
   >
   <a
     class="duration-150 hover:scale-[1.15] hover:translate-y-[-2px] hover:text-[#6aa8f9]"
-    href="/skills">Skills</a
+    href={`/${locale}/skills`}>{headers.header.skills}</a
   >
   <a
     class="duration-150 hover:scale-[1.15] hover:translate-y-[-2px] hover:text-[#6aa8f9]"
-    href="/about">About</a
+    href={`/${locale}/about`}>{headers.header.about}</a
   >
+  <a href="/en/">EN</a>
+  <a href="/es/">ES</a>
 </header>

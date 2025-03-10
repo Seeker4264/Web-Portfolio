@@ -1,7 +1,11 @@
 ---
-import Background from "../components/Background.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import Background from "../../components/Background.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+
+import messages from "../../messages/en.json";
+
+import "../../styles/index.scss";
 
 interface Props {
   title: string;
@@ -23,7 +27,7 @@ const { title, description } = Astro.props;
   </head>
   <body>
     <Background />
-    <Header />
+    <Header locale="en" headers={messages} />
     <slot />
     <Footer />
   </body>

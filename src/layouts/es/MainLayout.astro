@@ -1,0 +1,46 @@
+---
+import Background from "../../components/Background.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+
+import messages from "../../messages/es.json";
+
+import "../../styles/index.scss";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Background />
+    <Header locale="es" headers={messages} />
+    <slot />
+    <Footer />
+  </body>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show-element");
+        }
+      });
+    });
+
+    const hiddenElements = document.querySelectorAll(".hidden-element");
+    hiddenElements.forEach((el) => observer.observe(el));
+  </script>
+</html>

@@ -1,17 +1,24 @@
 {
   "metadata": {
-    "title": "Home - Sebastián Portfolio",
-    "description": "Hire Sebastián to develop your next Website and Web Application!"
+    "title": "Inicio - Sebastián Portafolio",
+    "description": "¡Contrata a Sebastián para el desarrollo de tu siguiente aplicación y sitio web!"
+  },
+  "header": {
+    "home": "Inicio",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "skills": "Conocimientos",
+    "about": "Acerca de"
   },
   "badges": {
-    "available": "Available to work"
+    "available": "Disponible para ofertas"
   },
   "profile": {
-    "title": "Software Engineer / Frontend & Backend Developer",
-    "description": "Web programmer with 3 years of experience. Specialized in creating web applications and websites.",
+    "title": "Ingeniero de sistemas / Desarrollador Frontend y Backend",
+    "description": "Programador web con 3 años de experiencia. Especializado en crear plataformas y sitios web.",
     "contact": {
-      "mailMe": "Contact me",
-      "resume": "Download resume"
+      "mailMe": "Contáctame",
+      "resume": "Descargar CV"
     }
   }
 }

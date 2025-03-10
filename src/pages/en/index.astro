@@ -1,0 +1,69 @@
+---
+import MainLayout from "../../layouts/en/MainLayout.astro";
+import Badge from "../../components/Badge.astro";
+import Social from "../../components/Social.astro";
+
+import messages from "../../messages/en.json";
+
+import LinkedIn from "../../components/icons/LinkedIn.astro";
+import Github from "../../components/icons/Github.astro";
+import Mail from "../../components/icons/Mail.astro";
+import Clipboard from "../../components/icons/Clipboard.astro";
+---
+
+<MainLayout
+  title={messages.metadata.title}
+  description={messages.metadata.description}
+>
+  <main class="flex flex-col justify-center items-center">
+    <section
+      id="hero"
+      class="w-[80%] lg:w-[48rem] py-8 lg:py-20 mx-auto hidden-element"
+    >
+      <aside class="flex flex-row items-center gap-x-6 mb-5">
+        <img class="rounded-full size-20" src="/profile.jpg" alt="sebastian" />
+        <a
+          class="flex flex-row justify-center items-center size-fit duration-150 hover:scale-110"
+          href="https://www.linkedin.com/in/sebasti%C3%A1n-hern%C3%A1ndez-803355296/"
+          target="_blank"
+          rel="noopener"
+        >
+          <Badge>{messages.badges.available}</Badge>
+        </a>
+      </aside>
+      <h1
+        class="flex flex-wrap flex-row gap-x-4 text-5xl md:text-6xl font-bold pb-4"
+      >
+        <span class="textGrad">Sebastián</span>
+        Hernández
+      </h1>
+      <h2 class="text-2xl font-semibold pb-2">
+        {messages.profile.title}
+      </h2>
+      <p class="text-lg font-thin text-[#ffffffcc] pb-1">
+        {messages.profile.description}
+      </p>
+
+      <nav class="flex flex-wrap flex-row items-center gap-4 py-5">
+        <Social title="GitHub" href="https://github.com/Seeker4264/">
+          <Github class="size-5" />
+        </Social>
+        <Social
+          title="LinkedIn"
+          href="https://www.linkedin.com/in/sebasti%C3%A1n-hern%C3%A1ndez-803355296/"
+        >
+          <LinkedIn class="size-5" />
+        </Social>
+        <Social
+          title={messages.profile.contact.mailMe}
+          href="mailto:sebashmorales@gmail.com"
+        >
+          <Mail class="size-5" />
+        </Social>
+        <Social title={messages.profile.contact.resume} href="/Resume.pdf">
+          <Clipboard class="size-5" />
+        </Social>
+      </nav>
+    </section>
+  </main>
+</MainLayout>
