@@ -18,7 +18,7 @@ import Clipboard from "../../components/icons/Clipboard.astro";
   <main class="flex flex-col justify-center items-center">
     <section
       id="hero"
-      class="w-[80%] lg:w-[48rem] py-8 lg:py-20 mx-auto hidden-element"
+      class="w-[80%] lg:w-[48rem] py-8 lg:py-32 mx-auto hidden-element"
     >
       <aside class="flex flex-row items-center gap-x-6 mb-5">
         <img class="rounded-full size-20" src="/profile.jpg" alt="sebastian" />
@@ -40,9 +40,6 @@ import Clipboard from "../../components/icons/Clipboard.astro";
       <h2 class="text-2xl font-semibold pb-2">
         {messages.profile.title}
       </h2>
-      <p class="text-lg font-thin text-[#ffffffcc] pb-1">
-        {messages.profile.description}
-      </p>
 
       <nav class="flex flex-wrap flex-row items-center gap-4 py-5">
         <Social title="GitHub" href="https://github.com/Seeker4264/">
@@ -64,6 +61,15 @@ import Clipboard from "../../components/icons/Clipboard.astro";
           <Clipboard class="size-5" />
         </Social>
       </nav>
+    </section>
+
+    <section
+      id="description"
+      class="w-[80%] lg:w-[48rem] py-8 lg:py-20 mx-auto hidden-element"
+    >
+      <p class="text-lg font-thin text-[#ffffffcc] pb-1">
+        {messages.profile.description}
+      </p>
     </section>
   </main>
 </MainLayout>
