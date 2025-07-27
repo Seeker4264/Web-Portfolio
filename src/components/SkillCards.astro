@@ -1,0 +1,95 @@
+---
+import HTML5 from '../icons/skills/HTML5.astro';
+import CSS from '../icons/skills/CSS.astro';
+import JavaScript from '../icons/skills/JavaScript.astro';
+import TypeScript from '../icons/skills/TypeScript.astro';
+import AstroIcon from '../icons/skills/AstroIcon.astro';
+import NodeJS from '../icons/skills/NodeJS.astro';
+import NestJS from '../icons/skills/NestJS.astro';
+import ReactJS from '../icons/skills/ReactJS.astro';
+import Tailwind from '../icons/skills/Tailwind.astro';
+import NextJS from '../icons/skills/NextJS.astro';
+import Git from '../icons/skills/Git.astro';
+import Java from '../icons/skills/Java.astro';
+import Spring from '../icons/skills/Spring.astro';
+import Postgre from '../icons/skills/Postgre.astro';
+import Strapi from '../icons/skills/Strapi.astro';
+import Firebase from '../icons/skills/Firebase.astro';
+
+const TAGS = [
+  {
+    name: "HTML5",
+    icon: HTML5
+  },
+  {
+    name: "CSS",
+    icon: CSS
+  },
+  {
+    name: "JavaScript",
+    icon: JavaScript
+  },
+  {
+    name: "TypeScript",
+    icon: TypeScript
+  },
+  {
+    name: "Astro",
+    icon: AstroIcon
+  },
+  {
+    name: "Node.js",
+    icon: NodeJS
+  },
+  /*{
+    name: "Nest.js",
+    icon: NestJS
+  },*/
+  {
+    name: "React.js",
+    icon: ReactJS
+  },
+  {
+    name: "Tailwind",
+    icon: Tailwind
+  },
+  {
+    name: "Next.js",
+    icon: NextJS
+  },
+  {
+    name: "Git",
+    icon: Git
+  },
+  {
+    name: "Java",
+    icon: Java
+  },
+  {
+    name: "Spring",
+    icon: Spring
+  },
+  {
+    name: "PostgreSQL",
+    icon: Postgre
+  },
+  /*{
+    name: "Strapi",
+    icon: Strapi
+  },*/
+  {
+    name: "Firebase",
+    icon: Firebase
+  },
+];
+---
+<ul class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 place-items-center gap-5">
+  {
+    TAGS.map((tag) => {return (
+      <li class="group flex flex-col justify-center items-center rounded-lg border border-[#555] gap-5 w-[10rem] p-6 shadow-[0px_10px_30px_-5px_black] bg-[#111] cursor-default select-none duration-200 hover:scale-105 hover:bg-[#222]">
+        <tag.icon class="size-16 filter grayscale duration-200 group-hover:grayscale-0" />
+        <h4 class="text-xl font-bold">{tag.name}</h4>
+      </li>
+    )})
+  }
+</ul>

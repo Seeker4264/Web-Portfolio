@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+:root {
+  font-family: "Noto Sans Variable", sans-serif;
+  scroll-behavior: smooth;
+}

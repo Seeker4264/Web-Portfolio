@@ -1,4 +1,6 @@
 ---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 
 interface Props {
@@ -19,7 +21,9 @@ const { title, description } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="relative bg-fixed bg-gradient-to-br from-[#393975] to-[#111] text-white duration-150">
+		<Header />
 		<slot />
+		<Footer />
 	</body>
 </html>
