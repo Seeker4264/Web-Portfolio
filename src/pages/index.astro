@@ -6,9 +6,13 @@ import Mail from "../icons/Mail.astro";
 import Clipboard from "../icons/Clipboard.astro";
 import Briefcase from "../icons/Briefcase.astro";
 import Tool from "../icons/Tool.astro";
+import Chat from "../icons/Chat.astro";
+import Phone from "../icons/Phone.astro";
 
 import Experience from "../components/Experience.astro";
 import SkillCards from "../components/SkillCards.astro";
+import Reviews from "../components/Reviews.astro";
+import Contact from "../components/Contact.astro";
 
 import Layout from "../layouts/layout.astro";
 ---
@@ -17,7 +21,7 @@ import Layout from "../layouts/layout.astro";
 	title="Sebastian Portfolio - Software Developer"
 	description="Hire Sebastian to develop your next Application!"
 >
-	<main>
+	<main class="flex flex-col items-center justify-center gap-6">
 
 		{/* Introduction */}
 
@@ -35,7 +39,7 @@ import Layout from "../layouts/layout.astro";
 				Software developer / Frontend & Backend developer
 			</h2>
 			<p class="text-lg font-thin text-[#ffffffcc] pb-1">
-				Venezuelan web programmer with 2 years of experience. Specialized in creating <span class="text-[#befdf5] font-semibold">web applications and websites.</span>
+				Passionate software developer with 2.5 years of experience, specialized in creating <span class="text-[#befdf5] font-semibold">web applications and websites.</span> With a commitment to quality and a focus on user experience, I strive to deliver solutions that not only meet but exceed client expectations.
 			</p>
 
 			<nav class="flex flex-wrap flex-row items-center gap-4 py-5">
@@ -61,7 +65,7 @@ import Layout from "../layouts/layout.astro";
 		<section id="experience" class="relative w-[80%] lg:w-[56rem] py-16 mx-auto">
 			<div class="flex flex-row items-center gap-4 pb-12">
 				<Briefcase class="size-12 sm:size-12 text-[#97DFFC]" />
-				<h2 class="inline-block text-4xl sm:text-5xl font-bold text-[#97DFFC]">
+				<h2 class="inline-block text-4xl sm:text-5xl font-bold bg-gradient-to-br from-[#97DFFC] to-[#93CAF6] text-transparent bg-clip-text">
 					Experience
 				</h2>
 			</div>
@@ -73,12 +77,23 @@ import Layout from "../layouts/layout.astro";
 
 		{/* Reviews */}
 
+		<section id="reviews" class="relative w-[80%] lg:w-[56rem] py-16 mx-auto">
+			<div class="flex flex-row items-center gap-4 pb-12">
+				<Chat class="size-12 sm:size-12 text-[#97DFFC]" />
+				<h2 class="inline-block text-4xl sm:text-5xl font-bold bg-gradient-to-br from-[#97DFFC] to-[#93CAF6] text-transparent bg-clip-text">
+					Reviews
+				</h2>
+			</div>
+
+			<Reviews />
+		</section>
+
 		{/* Skills */}
 
 		<section id="skills" class="relative w-[80%] lg:w-[56rem] py-16 mx-auto">
 			<div class="flex flex-row items-center gap-4 pb-12">
-				<Tool class="size-12 sm:size-12" />
-				<h2 class="inline-block text-4xl sm:text-5xl font-bold bg-gradient-to-br from-[#ffffff] via-[#ffffff] to-[#b897e3] text-transparent bg-clip-text">
+				<Tool class="size-12 sm:size-12 text-[#97DFFC]" />
+				<h2 class="inline-block text-4xl sm:text-5xl font-bold bg-gradient-to-br from-[#97DFFC] to-[#93CAF6] text-transparent bg-clip-text">
 					Skills
 				</h2>
 			</div>
@@ -87,6 +102,17 @@ import Layout from "../layouts/layout.astro";
 		</section>
 
 		{/* Contact */}
+
+		<section id="skills" class="relative w-[80%] lg:w-[56rem] py-16 mx-auto">
+			<div class="flex flex-row items-center gap-4 pb-12">
+				<Phone class="size-12 sm:size-12 text-[#97DFFC]" />
+				<h2 class="inline-block text-4xl sm:text-5xl font-bold bg-gradient-to-br from-[#97DFFC] to-[#93CAF6] text-transparent bg-clip-text">
+					Contact
+				</h2>
+			</div>
+
+			<Contact />
+		</section>
 
 	</main>
 </Layout>
