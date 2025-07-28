@@ -1,0 +1,141 @@
+---
+import RCAI_Landing from "../assets/readychatai/image_1.png"
+import RCAI_System from "../assets/readychatai/image_2.png"
+import RCAI_Assistant from "../assets/readychatai/image_3.png"
+import RCAI_Banners from "../assets/readychatai/image_4.png"
+
+import SH_1 from "../assets/freelance/image_1.png"
+import SH_2 from "../assets/freelance/image_2.png"
+import SH_3 from "../assets/freelance/image_3.png"
+
+const PROJECTS = [
+  {
+    name: "ReadyChatAI Dashboard",
+    description1: "Worked as a frontend developer on ReadyChatAI, a platform for sales and business management through AI. Developed several sections of the app using Next.js, TypeScript and Tailwind CSS.",
+    description2: "Implemented various features like a scheduling assistant for an appointment booking system that I also designed and developed, waveform visualizer for audio attachments to enhance engagement with the customers of every business on the platform, and small components along the page to improve user experience.",
+    description3: "Also revamped and improved the design of the platform and landing page, making it more user-friendly and visually appealing. Fixed issues and bugs to ensure a smooth user experience.",
+    image_amount: 4,
+    image1: RCAI_Landing,
+    image2: RCAI_System,
+    image3: RCAI_Assistant,
+    image4: RCAI_Banners,
+    label: "ReadyChatAI Platform",
+    link: "https://www.readychatai.com/",
+  },
+  {
+    name: "SH. Company - Website Layout",
+    description1: "One of my various projects as a freelance developer. This is a website layout I designed and developed for a company that provides financial services.",
+    description2: "Developed the layout using HTML, CSS and JavaScript, as well as other tools like React.js for interactivity and Tailwind CSS for simpler CSS styling. The website is fully responsive and has a modern design that adapts to different screen sizes.",
+    description3: "This website was made as a demostration of the design and aesthetic of the website, and is not the final version of their website. The final product was delivered to the client with all the necessary deliverables and documentation.",
+    image_amount: 3,
+    image1: SH_1,
+    image2: SH_2,
+    image3: SH_3,
+    label: "Website Layout Showcase",
+    link: "https://sh-company-finance.vercel.app/",
+  },
+]
+---
+
+<ol class="flex flex-col justify-center items-center gap-8">
+  {
+    PROJECTS.map((project) => {
+      return (
+        <li class="group flex flex-col md:flex-row justify-start items-center gap-8
+          rounded-xl border-2 border-[#5a737d] bg-[#00000022] backdrop-blur-xl shadow-[0px_10px_30px_-5px_#000000bb] px-5 py-3
+          duration-200"
+        >
+          <div class="grid grid-cols-2 grid-rows-2">
+            {
+              project.image_amount == 1 && (
+                <img
+                  class="rounded-lg border-2 border-[#8EB5F0] object-cover h-[24rem] w-[32rem] col-span-2 row-span-2"
+                  src={project.image1.src}
+                  alt="Project Image 1"
+                />
+              )
+            }
+            {
+              project.image_amount == 2 && (
+                <img
+                  class="rounded-t-lg border-2 border-[#8EB5F0] object-cover h-[12rem] w-[32rem] col-span-2"
+                  src={project.image1.src}
+                  alt="Project Image 1"
+                />
+                <img
+                  class="rounded-b-lg border-2 border-[#8EB5F0] object-cover h-[12rem] w-[32rem] col-span-2 row-start-2"
+                  src={project.image2.src}
+                  alt="Project Image 2"
+                />
+              )
+            }
+            {
+              project.image_amount == 3 && (
+                <img
+                  class="rounded-l-lg border-2 border-[#8EB5F0] object-cover h-[24rem] w-[16rem] row-span-2"
+                  src={project.image1.src}
+                  alt="Project Image 1"
+                />
+                <img
+                  class="rounded-tr-lg border-2 border-[#8EB5F0] object-cover h-[12rem] w-[16rem]"
+                  src={project.image2.src}
+                  alt="Project Image 2"
+                />
+                <img
+                  class="rounded-br-lg border-2 border-[#8EB5F0] object-cover h-[12rem] w-[16rem] col-start-2"
+                  src={project.image3.src}
+                  alt="Project Image 3"
+                />
+              )
+            }
+            {
+              project.image_amount == 4 && (
+                <img
+                  class="rounded-tl-lg border-2 border-[#8EB5F0] object-cover h-[12rem] w-[16rem]"
+                  src={project.image1.src}
+                  alt="Project Image 1"
+                />
+                <img
+                  class="rounded-tr-lg border-2 border-[#8EB5F0] object-cover h-[12rem] w-[16rem]"
+                  src={project.image2.src}
+                  alt="Project Image 2"
+                />
+                <img
+                  class="rounded-bl-lg border-2 border-[#8EB5F0] object-cover h-[12rem] w-[16rem]"
+                  src={project.image3.src}
+                  alt="Project Image 3"
+                />
+                <img
+                  class="rounded-br-lg border-2 border-[#8EB5F0] object-cover h-[12rem] w-[16rem]"
+                  src={project.image4.src}
+                  alt="Project Image 4"
+                />
+              )
+            }
+          </div>
+
+          <aside class="flex flex-col items-start justify-center gap-5 w-[40rem]">
+            <div class="flex flex-col items-start gap-3">
+              <h3 class="text-3xl font-semibold text-[#97DFFC] group-hover:text-[#c0edff] mb-2 duration-200">
+                {project.name}
+              </h3>
+              <p class="text-sm text-gray-300">
+                {project.description1}
+              </p>
+              <p class="text-sm text-gray-300">
+                {project.description2}
+              </p>
+              <p class="text-sm text-gray-300">
+                {project.description3}
+              </p>
+            </div>
+            <a href={project.link} target="_blank" rel="noopener noreferrer"
+              class="rounded-full bg-[#7364D2] hover:bg-[#8EB5F0] px-3 py-2 ml-auto duration-200 text-sm font-semibold">
+              {project.label}
+            </a>
+          </aside>
+        </li>
+      );
+    })
+  }
+</ol>
