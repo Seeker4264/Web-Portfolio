@@ -21,9 +21,15 @@ const { title, description } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="relative bg-fixed bg-gradient-to-br from-[#393975] to-[#111] text-white duration-150">
+	<body class="relative bg-cover bg-gradient-to-br from-[#393975] to-[#111] text-white duration-150">
 		<Header />
 		<slot />
 		<Footer />
 	</body>
 </html>
+
+<style>
+	html {
+		background-color: #222;
+	}
+</style>
