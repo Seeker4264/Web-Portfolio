@@ -1,49 +1,47 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Badge from '../components/Badge.astro';
-import Social from '../components/Social.astro';
-import Experience from '../components/Experience.astro';
-import Projects from '../components/Projects.astro';
-import SkillCards from '../components/SkillCards.astro';
+import Github from "../icons/Github.astro";
+import LinkedIn from "../icons/LinkedIn.astro";
+import Mail from "../icons/Mail.astro";
+import Clipboard from "../icons/Clipboard.astro";
+import Briefcase from "../icons/Briefcase.astro";
+import Tool from "../icons/Tool.astro";
+import Chat from "../icons/Chat.astro";
+import Phone from "../icons/Phone.astro";
+import Utensil from "../icons/Utensil.astro";
 
-import LinkedIn from '../components/icons/LinkedIn.astro';
-import Github from '../components/icons/Github.astro';
-import Mail from '../components/icons/Mail.astro';
-import Briefcase from '../components/icons/Briefcase.astro';
-import Code from '../components/icons/Code.astro';
-import Info from '../components/icons/Info.astro';
-import Tool from '../components/icons/Tool.astro';
-import Clipboard from '../components/icons/Clipboard.astro';
+import Social from "../components/Social.astro";
+import Career from "../components/Career.astro";
+import Projects from "../components/Projects.astro";
+import SkillCards from "../components/SkillCards.astro";
+import Reviews from "../components/Reviews.astro";
+import Contact from "../components/Contact.astro";
+
+import Layout from "../layouts/layout.astro";
 ---
 
 <Layout
 	title="Sebastian Portfolio - Software Developer"
-	description="Hire Sebastian to develop your next Web Application!">
-	<main>
+	description="Hire Sebastian to develop your next Application!"
+>
+	<main class="flex flex-col items-center justify-center gap-6">
 
-		<section id="hero" class="w-[80%] lg:w-[48rem] py-8 lg:py-24 mx-auto">
+		{/* Introduction */}
+
+		<section id="hero" class="w-[80%] lg:w-[48rem] py-8 lg:py-24 mx-auto scroll-mt-4">
 			<aside class="flex flex-row items-center gap-x-6 mb-5">
 				<img class="rounded-full size-20" src="/profile.jpg" alt="sebastian" />
-				<a class="flex flex-row justify-center items-center size-fit duration-150 hover:scale-110"
-				href="https://www.linkedin.com/in/sebasti%C3%A1n-hern%C3%A1ndez-803355296/"
-				target="_blank"
-				rel="noopener">
-					<Badge>
-						Available to work
-					</Badge>
-				</a>
 			</aside>
 			<h1 class="flex flex-wrap flex-row gap-x-4 text-5xl md:text-6xl font-bold pb-4">
-				<span class="textGrad">
+				<span class="text-transparent bg-clip-text bg-gradient-to-br from-[#d2a4e5] to-[#c19ee0]">
 					Sebastián
 				</span>
 				Hernández
 			</h1>
 			<h2 class="text-2xl font-semibold pb-2">
-				Software engineer / Frontend & Backend developer
+				Software developer / Frontend & Backend developer
 			</h2>
 			<p class="text-lg font-thin text-[#ffffffcc] pb-1">
-				Venezuelan web programmer with 2 years of experience. Specialized in creating <span class="text-[#befdf5] font-semibold">web applications and websites.</span>
+				Passionate software developer with 2.5 years of experience, specialized in creating <span class="text-[#befdf5] font-semibold">web applications and websites.</span> With a commitment to quality and a focus on user experience, I strive to deliver solutions that not only meet but exceed client expectations.
 			</p>
 
 			<nav class="flex flex-wrap flex-row items-center gap-4 py-5">
@@ -51,7 +49,7 @@ import Clipboard from '../components/icons/Clipboard.astro';
 				<Social title="GitHub" href="https://github.com/Seeker4264/">
 					<Github class="size-5" />
 				</Social>
-				<Social title="LinkedIn" href="https://www.linkedin.com/in/sebasti%C3%A1n-hern%C3%A1ndez-803355296/">
+				<Social title="LinkedIn" href="https://www.linkedin.com/in/sebastian-hernandez-morales/">
 					<LinkedIn class="size-5" />
 				</Social>
 				<Social title="Contact me" href="mailto:sebashmorales@gmail.com">
@@ -64,23 +62,27 @@ import Clipboard from '../components/icons/Clipboard.astro';
 			</nav>
 		</section>
 
-		<section id="experience" class="relative w-[80%] lg:w-[56rem] py-16 mx-auto">
+		{/* Career */}
+
+		<section id="career" class="relative w-[80%] lg:w-[56rem] py-16 mx-auto scroll-mt-4">
 			<div class="flex flex-row items-center gap-4 pb-12">
-				<Briefcase class="size-12 sm:size-12" />
-				<h2 class="inline-block text-4xl sm:text-5xl font-bold bg-gradient-to-tr from-[#ffffff] via-[#ffffff] to-[#b897e3] text-transparent bg-clip-text">
-					Experience
+				<Briefcase class="size-12 sm:size-12 text-[#97DFFC]" />
+				<h2 class="inline-block text-4xl sm:text-5xl font-bold bg-gradient-to-br from-[#97DFFC] to-[#93CAF6] text-transparent bg-clip-text">
+					Career
 				</h2>
 			</div>
 
-			<div class="absolute rounded-full w-[0.15rem] h-[60%] mt-[12px] ml-[8px] sm:ml-[11px] z-[-1] bg-gradient-to-b from-[#739fb7] via-[#6d5185] to-transparent" />
+			<div class="absolute rounded-full w-[0.15rem] h-[60%] mt-[12px] ml-[8px] sm:ml-[11px] z-[-1] bg-gradient-to-b from-[#858AE3] via-[#7364D2] to-transparent" />
 
-			<Experience />
+			<Career />
 		</section>
 
-		<section id="projects" class="relative w-[80%] lg:w-[56rem] py-16 mx-auto">
+		{/* Projects */}
+
+		<section id="projects" class="relative w-[80%] lg:w-[56rem] py-16 mx-auto scroll-mt-4">
 			<div class="flex flex-row items-center gap-4 pb-12">
-				<Code class="size-12 sm:size-12" />
-				<h2 class="inline-block text-4xl sm:text-5xl font-bold bg-gradient-to-t from-[#ffffff] via-[#ffffff] to-[#b897e3] text-transparent bg-clip-text">
+				<Utensil class="size-12 sm:size-12 text-[#97DFFC]" />
+				<h2 class="inline-block text-4xl sm:text-5xl font-bold bg-gradient-to-br from-[#97DFFC] to-[#93CAF6] text-transparent bg-clip-text">
 					Projects
 				</h2>
 			</div>
@@ -88,10 +90,25 @@ import Clipboard from '../components/icons/Clipboard.astro';
 			<Projects />
 		</section>
 
-		<section id="skills" class="relative w-[80%] lg:w-[56rem] py-16 mx-auto">
+		{/* Reviews */}
+
+		<section id="reviews" class="relative w-[80%] lg:w-[56rem] py-16 mx-auto scroll-mt-4">
 			<div class="flex flex-row items-center gap-4 pb-12">
-				<Tool class="size-12 sm:size-12" />
-				<h2 class="inline-block text-4xl sm:text-5xl font-bold bg-gradient-to-br from-[#ffffff] via-[#ffffff] to-[#b897e3] text-transparent bg-clip-text">
+				<Chat class="size-12 sm:size-12 text-[#97DFFC]" />
+				<h2 class="inline-block text-4xl sm:text-5xl font-bold bg-gradient-to-br from-[#97DFFC] to-[#93CAF6] text-transparent bg-clip-text">
+					Reviews
+				</h2>
+			</div>
+
+			<Reviews />
+		</section>
+
+		{/* Skills */}
+
+		<section id="skills" class="relative w-[80%] lg:w-[56rem] py-16 mx-auto scroll-mt-4">
+			<div class="flex flex-row items-center gap-4 pb-12">
+				<Tool class="size-12 sm:size-12 text-[#97DFFC]" />
+				<h2 class="inline-block text-4xl sm:text-5xl font-bold bg-gradient-to-br from-[#97DFFC] to-[#93CAF6] text-transparent bg-clip-text">
 					Skills
 				</h2>
 			</div>
@@ -99,34 +116,17 @@ import Clipboard from '../components/icons/Clipboard.astro';
 			<SkillCards />
 		</section>
 
-		<section id="about" class="relative w-[80%] lg:w-[56rem] py-16 mx-auto">
+		{/* Contact */}
+
+		<section id="contact" class="relative w-[80%] lg:w-[56rem] py-16 mx-auto scroll-mt-4">
 			<div class="flex flex-row items-center gap-4 pb-12">
-				<Info class="size-12 sm:size-12" />
-				<h2 class="inline-block text-4xl sm:text-5xl font-bold bg-gradient-to-b from-[#ffffff] via-[#ffffff] to-[#b897e3] text-transparent bg-clip-text">
-					About me
+				<Phone class="size-12 sm:size-12 text-[#97DFFC]" />
+				<h2 class="inline-block text-4xl sm:text-5xl font-bold bg-gradient-to-br from-[#97DFFC] to-[#93CAF6] text-transparent bg-clip-text">
+					Contact
 				</h2>
 			</div>
 
-			<ul class="flex flex-col lg:flex-row justify-center items-center gap-16 text-lg [&>li>p]:pb-3 [&>li]:font-medium [&>li]:text-pretty [&>li]:text-[#ffffffdd]">
-				<li class="w-[80%] lg:w-[60%] [&>p>span]:text-[#befdf5] [&>p>span]:font-semibold">
-					<p>
-						My name is Sebastián Hernández, and I'm a <span>third-year Systems Engineering student</span>. My interest towards the tech industry and software sector started when I was 14.
-					</p>
-					<p>
-						I have a strong intellectual curiosity and a
-						constant commitment to learning new skills. I have a
-						remarkable ability to adapt to different situations and I
-						strive to identify and apply the most effective solutions
-						to any challenge I may encounter during my tasks.
-					</p>
-					<p>
-						I'm always improving my skills, and my main goal is to <span>contribute in the tech industry.</span>
-					</p>
-				</li>
-				<li class="group rounded-2xl border border-[#444] w-[16rem] p-5 bg-[#222] rotate-3 duration-150 hover:scale-105 hover:rotate-[-1deg]">
-					<img class="rounded-xl size-full shadow-[0px_20px_30px_-5px_black]" src="/profile.jpg" alt="sebastian" />
-				</li>
-			</ul>
+			<Contact />
 		</section>
 
 	</main>
