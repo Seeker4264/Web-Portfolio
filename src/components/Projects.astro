@@ -46,11 +46,13 @@ const PROJECTS = [
           px-7 py-6
           duration-200"
         >
-          <div class="grid grid-cols-2 grid-rows-2">
+          <div class="flex flex-col md:grid md:grid-cols-2 md:grid-rows-2">
             {
               project.image_amount == 1 && (
                 <img
-                  class="rounded-lg border-2 border-[#8EB5F0] object-cover h-[24rem] w-[32rem] col-span-2 row-span-2"
+                  class="rounded-lg border-2 border-[#8EB5F0] object-cover
+                  h-[10rem] w-[14rem]
+                  md:h-[24rem] md:w-[32rem] md:col-span-2 md:row-span-2"
                   src={project.image1.src}
                   alt="Project Image 1"
                 />
@@ -59,12 +61,16 @@ const PROJECTS = [
             {
               project.image_amount == 2 && (
                 <img
-                  class="rounded-t-lg border-2 border-[#8EB5F0] object-cover h-[12rem] w-[32rem] col-span-2"
+                  class="rounded-t-lg border-2 border-[#8EB5F0] object-cover
+                  h-[10rem] w-[14rem]
+                  md:h-[12rem] md:w-[32rem] md:col-span-2"
                   src={project.image1.src}
                   alt="Project Image 1"
                 />
                 <img
-                  class="rounded-b-lg border-2 border-[#8EB5F0] object-cover h-[12rem] w-[32rem] col-span-2 row-start-2"
+                  class="rounded-b-lg border-2 border-[#8EB5F0] object-cover
+                  h-[10rem] w-[14rem]
+                  md:h-[12rem] md:w-[32rem] md:col-span-2 md:row-start-2"
                   src={project.image2.src}
                   alt="Project Image 2"
                 />
@@ -73,17 +79,23 @@ const PROJECTS = [
             {
               project.image_amount == 3 && (
                 <img
-                  class="rounded-l-lg border-2 border-[#8EB5F0] object-cover h-[24rem] w-[16rem] row-span-2"
+                  class="rounded-t-lg md:rounded-l-lg border-2 border-[#8EB5F0] object-cover
+                  h-[10rem] w-[14rem]
+                  md:h-[24rem] md:w-[16rem] md:row-span-2"
                   src={project.image1.src}
                   alt="Project Image 1"
                 />
                 <img
-                  class="rounded-tr-lg border-2 border-[#8EB5F0] object-cover h-[12rem] w-[16rem]"
+                  class="md:rounded-tr-lg border-2 border-[#8EB5F0] object-cover
+                  h-[10rem] w-[14rem]
+                  md:h-[12rem] md:w-[16rem]"
                   src={project.image2.src}
                   alt="Project Image 2"
                 />
                 <img
-                  class="rounded-br-lg border-2 border-[#8EB5F0] object-cover h-[12rem] w-[16rem] col-start-2"
+                  class="rounded-b-lg md:rounded-br-lg border-2 border-[#8EB5F0] object-cover
+                  h-[10rem] w-[14rem]
+                  md:h-[12rem] md:w-[16rem] md:col-start-2"
                   src={project.image3.src}
                   alt="Project Image 3"
                 />
@@ -92,22 +104,30 @@ const PROJECTS = [
             {
               project.image_amount == 4 && (
                 <img
-                  class="rounded-tl-lg border-2 border-[#8EB5F0] object-cover h-[12rem] w-[16rem]"
+                  class="rounded-t-lg md:rounded-tl-lg border-2 border-[#8EB5F0] object-cover
+                  h-[10rem] w-[14rem]
+                  md:h-[12rem] md:w-[16rem]"
                   src={project.image1.src}
                   alt="Project Image 1"
                 />
                 <img
-                  class="rounded-tr-lg border-2 border-[#8EB5F0] object-cover h-[12rem] w-[16rem]"
+                  class="md:rounded-tr-lg border-2 border-[#8EB5F0] object-cover
+                  h-[10rem] w-[14rem]
+                  md:h-[12rem] md:w-[16rem]"
                   src={project.image2.src}
                   alt="Project Image 2"
                 />
                 <img
-                  class="rounded-bl-lg border-2 border-[#8EB5F0] object-cover h-[12rem] w-[16rem]"
+                  class="md:rounded-bl-lg border-2 border-[#8EB5F0] object-cover
+                  h-[10rem] w-[14rem]
+                  md:h-[12rem] md:w-[16rem]"
                   src={project.image3.src}
                   alt="Project Image 3"
                 />
                 <img
-                  class="rounded-br-lg border-2 border-[#8EB5F0] object-cover h-[12rem] w-[16rem]"
+                  class="rounded-b-lg md:rounded-br-lg border-2 border-[#8EB5F0] object-cover
+                  h-[10rem] w-[14rem]
+                  md:h-[12rem] md:w-[16rem]"
                   src={project.image4.src}
                   alt="Project Image 4"
                 />
@@ -115,7 +135,7 @@ const PROJECTS = [
             }
           </div>
 
-          <aside class="flex flex-col items-start justify-center gap-5 w-[40rem]">
+          <aside class="flex flex-col items-start justify-center gap-5 w-[14rem] md:w-[40rem]">
             <div class="flex flex-col items-start gap-3">
               <h3 class="text-3xl font-semibold text-[#97DFFC] group-hover:text-[#c0edff] mb-2 duration-200">
                 {project.name}
